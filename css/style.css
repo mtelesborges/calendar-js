@@ -1,0 +1,49 @@
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button:focus,
+button:active{
+    outline: none;
+}
+
+hr{
+    margin: 0;
+}
+.s, .days{
+    display: flex;
+}
+
+.d{
+    width: calc(100%/7);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.o{
+    color: darkgray;
+}
+
+.arrow{
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.arrow:hover{
+    background-color: #f1f3f4;
+    transition: background-color 100ms linear;
+}
+
+.arrow img{
+    height: 25px;
+}
+
+.week-day{
+    color: #70757a;
+    font-weight: 500;
+}
