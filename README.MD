@@ -9,4 +9,4 @@
 * Pesquisa por período
 * Criação de compromissos
 * Marcação do dia atual
-* Integração com api de feriados do igbe
+* Integração com api de feriados do ibge
