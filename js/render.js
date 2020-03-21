@@ -6,10 +6,6 @@ export function render(date){
   let year             = date.getFullYear();
   let firstDay         = new Date(year, month, 1);
   let dayWeek          = firstDay.getDay();
-  
-  function getStringDate(){
-    return `${months[date.getMonth()]} de ${date.getFullYear()}`
-  }
 
   let element;
 
@@ -27,6 +23,6 @@ export function render(date){
     element.innerHTML = (currentDate).getDate();
   }
 
-  document.getElementById('now').innerHTML = getStringDate();
+  document.getElementById('now').innerHTML = `${months[date.getMonth()]} de ${date.getFullYear()}`;
 
 }
