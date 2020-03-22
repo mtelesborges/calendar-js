@@ -1,4 +1,4 @@
-import { months } from './months.js';
+import { ptBr as locale} from './locales/locale.js'
 
 export function render(date){
   
@@ -16,13 +16,25 @@ export function render(date){
     const currentDate = new Date(year, month, -dayWeek + 1 + index);
 
     element.classList.remove('o');
+    element.classList.remove('today');
 
     if(date.getMonth() != currentDate.getMonth())
       element.classList.add('o');
-        
+
+    if(   currentDate.getFullYear() == (new Date()).getFullYear()
+      &&  currentDate.getMonth()    == (new Date()).getMonth()
+      &&  currentDate.getDate()     == (new Date()).getDate()){
+        element.classList.add('today');
+      }
+
     element.innerHTML = (currentDate).getDate();
   }
+  
 
-  document.getElementById('now').innerHTML = `${months[date.getMonth()]} de ${date.getFullYear()}`;
+  for (let index = 0; index < 7; index++) {
+    document.getElementById(`wd${index + 1}`).innerHTML = `${locale.days[index].short}`;  
+  }
 
+  document.getElementById('now').innerHTML = `${locale.months[date.getMonth()].short} ${date.getFullYear()}`;
+  
 }
