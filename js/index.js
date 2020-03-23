@@ -19,6 +19,6 @@ document
   .getElementById('months')
   .addEventListener('change', () => rd.updateCalendar());
 
-  document
+document
   .getElementById('year')
   .addEventListener('change', () => rd.updateCalendar());

@@ -8,98 +8,96 @@
 </head>
 <body>
   <div style="display: flex; align-items: center;">
-    <div>
-      <div id="calendar">
-        <div class="title">
-          <button class="btn-direction" id="previous">
-            <img src="./svg/previous.svg" alt="<">
-          </button>
-          <div>
-            <select name="months" id="months">
-              <option value="0"  id="m1"></option>
-              <option value="1"  id="m2"></option>
-              <option value="2"  id="m3"></option>
-              <option value="3"  id="m4"></option>
-              <option value="4"  id="m5"></option>
-              <option value="5"  id="m6"></option>
-              <option value="6"  id="m7"></option>
-              <option value="7"  id="m8"></option>
-              <option value="8"  id="m9"></option>
-              <option value="9" id="m10"></option>
-              <option value="10" id="m11"></option>
-              <option value="11" id="m12"></option>
-            </select>
-            <input type="number" name="year" id="year">
-          </div>
-          <button class="btn-direction" id="next">
-            <img src="./svg/next.svg" alt=">">
-          </button>
+    <div id="calendar">
+      <div class="title">
+        <button class="btn-direction" id="previous">
+          <img src="./svg/previous.svg" alt="<">
+        </button>
+        <div>
+          <select name="months" id="months">
+            <option value="0"  id="m1"></option>
+            <option value="1"  id="m2"></option>
+            <option value="2"  id="m3"></option>
+            <option value="3"  id="m4"></option>
+            <option value="4"  id="m5"></option>
+            <option value="5"  id="m6"></option>
+            <option value="6"  id="m7"></option>
+            <option value="7"  id="m8"></option>
+            <option value="8"  id="m9"></option>
+            <option value="9" id="m10"></option>
+            <option value="10" id="m11"></option>
+            <option value="11" id="m12"></option>
+          </select>
+          <input type="number" name="year" id="year">
         </div>
-        <hr>
-        <div class="s">
-          <div class="wd" id="wd1"></div>
-          <div class="wd" id="wd2"></div>
-          <div class="wd" id="wd3"></div>
-          <div class="wd" id="wd4"></div>
-          <div class="wd" id="wd5"></div>
-          <div class="wd" id="wd6"></div>
-          <div class="wd" id="wd7"></div>
-        </div>
-        <hr style="margin-bottom: 1ch;">
-        <div class="s s1">
-          <div class="d" id="d1"></div>
-          <div class="d" id="d2"></div>
-          <div class="d" id="d3"></div>
-          <div class="d" id="d4"></div>
-          <div class="d" id="d5"></div>
-          <div class="d" id="d6"></div>
-          <div class="d" id="d7"></div>
-        </div>
-        <div class="s s2">
-          <div class="d" id="d8"></div>
-          <div class="d" id="d9"></div>
-          <div class="d" id="d10"></div>
-          <div class="d" id="d11"></div>
-          <div class="d" id="d12"></div>
-          <div class="d" id="d13"></div>
-          <div class="d" id="d14"></div>
-        </div>
-        <div class="s s3">
-          <div class="d" id="d15"></div>
-          <div class="d" id="d16"></div>
-          <div class="d" id="d17"></div>
-          <div class="d" id="d18"></div>
-          <div class="d" id="d19"></div>
-          <div class="d" id="d20"></div>
-          <div class="d" id="d21"></div>
-        </div>
-        <div class="s s4">
-          <div class="d" id="d22"></div>
-          <div class="d" id="d23"></div>
-          <div class="d" id="d24"></div>
-          <div class="d" id="d25"></div>
-          <div class="d" id="d26"></div>
-          <div class="d" id="d27"></div>
-          <div class="d" id="d28"></div>
-        </div>
-        <div class="s s5">
-          <div class="d" id="d29"></div>
-          <div class="d" id="d30"></div>
-          <div class="d" id="d31"></div>
-          <div class="d" id="d32"></div>
-          <div class="d" id="d33"></div>
-          <div class="d" id="d34"></div>
-          <div class="d" id="d35"></div>
-        </div>
-        <div class="s s6">
-          <div class="d" id="d36"></div>
-          <div class="d" id="d37"></div>
-          <div class="d" id="d38"></div>
-          <div class="d" id="d39"></div>
-          <div class="d" id="d40"></div>
-          <div class="d" id="d41"></div>
-          <div class="d" id="d42"></div>
-        </div>
+        <button class="btn-direction" id="next">
+          <img src="./svg/next.svg" alt=">">
+        </button>
+      </div>
+      <hr>
+      <div class="s">
+        <div class="wd" id="wd1"></div>
+        <div class="wd" id="wd2"></div>
+        <div class="wd" id="wd3"></div>
+        <div class="wd" id="wd4"></div>
+        <div class="wd" id="wd5"></div>
+        <div class="wd" id="wd6"></div>
+        <div class="wd" id="wd7"></div>
+      </div>
+      <hr style="margin-bottom: 1ch;">
+      <div class="s s1">
+        <div class="d" id="d1"></div>
+        <div class="d" id="d2"></div>
+        <div class="d" id="d3"></div>
+        <div class="d" id="d4"></div>
+        <div class="d" id="d5"></div>
+        <div class="d" id="d6"></div>
+        <div class="d" id="d7"></div>
+      </div>
+      <div class="s s2">
+        <div class="d" id="d8"></div>
+        <div class="d" id="d9"></div>
+        <div class="d" id="d10"></div>
+        <div class="d" id="d11"></div>
+        <div class="d" id="d12"></div>
+        <div class="d" id="d13"></div>
+        <div class="d" id="d14"></div>
+      </div>
+      <div class="s s3">
+        <div class="d" id="d15"></div>
+        <div class="d" id="d16"></div>
+        <div class="d" id="d17"></div>
+        <div class="d" id="d18"></div>
+        <div class="d" id="d19"></div>
+        <div class="d" id="d20"></div>
+        <div class="d" id="d21"></div>
+      </div>
+      <div class="s s4">
+        <div class="d" id="d22"></div>
+        <div class="d" id="d23"></div>
+        <div class="d" id="d24"></div>
+        <div class="d" id="d25"></div>
+        <div class="d" id="d26"></div>
+        <div class="d" id="d27"></div>
+        <div class="d" id="d28"></div>
+      </div>
+      <div class="s s5">
+        <div class="d" id="d29"></div>
+        <div class="d" id="d30"></div>
+        <div class="d" id="d31"></div>
+        <div class="d" id="d32"></div>
+        <div class="d" id="d33"></div>
+        <div class="d" id="d34"></div>
+        <div class="d" id="d35"></div>
+      </div>
+      <div class="s s6">
+        <div class="d" id="d36"></div>
+        <div class="d" id="d37"></div>
+        <div class="d" id="d38"></div>
+        <div class="d" id="d39"></div>
+        <div class="d" id="d40"></div>
+        <div class="d" id="d41"></div>
+        <div class="d" id="d42"></div>
       </div>
     </div>
   </div>
