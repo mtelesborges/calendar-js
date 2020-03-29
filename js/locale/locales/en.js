@@ -1,4 +1,5 @@
 export const en = {
+  locale: "en-US",
   days: [
     {
       "short": "Sun",

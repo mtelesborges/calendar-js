@@ -5,83 +5,32 @@
   margin-bottom: 1ch;
 }
 
-#calendar{
+#datepicker{
   padding: 1em;
   border: 1px solid rgba(0,0,0,.075);
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
   border-radius: .25rem!important;
-}
-
-#months{
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  width: 12ch;
-}
-
-#year{
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  width: 8ch;
-  text-align: right;
-}
-
-button{
-  background-color: transparent;
-  border: none;
-}
-
-button:focus,
-button:active{
-  outline: none;
-}
-
-hr{
-  margin: 0;
-}
-.s, .days{
-  display: flex;
-}
-
-.d:first-child{
-  color: #ED3434;
-}
-
-.d:last-child{
-  color: #457B9D;
-}
-
-.d{
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 100ms linear;
-}
-
-.wd{
-  color: #70757a;
-}
-
-.d,
-.wd{
-  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
   justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  width: 5ch;
-  height: 5ch;
 }
 
-.d:hover,
-.btn-direction:hover{
-  background-color: #f1f3f4;
-  color: black !important;
+#datepicker-months,
+#datepicker-years{
+  margin-top: 5px;
+  display: none;
 }
 
-.o{
-  color: darkgray;
+#datepicker-days,
+#datepicker-months,
+#datepicker-years{
+  min-height: 28ch;
+  min-width: 28ch;
+  justify-content: center;
 }
+
 
 .btn-direction{
   cursor: pointer;
@@ -98,8 +47,103 @@ hr{
   height: 2ch;
 }
 
-.today{
-  background-color: #1967d2;
+#btn-year,
+#btn-month{
+  min-width: 10ch;
+}
+
+.year,
+.month,
+#btn-year,
+#btn-month{
+  border-radius: 15px;
+  padding: 0.25em;
+  transition: background-color 0.3s linear;
+  cursor: pointer;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus,
+button:active{
+  outline: none;
+}
+
+hr{
+  margin: 0;
+}
+
+.day:first-child{
+  color: #ED3434;
+}
+
+.day:last-child{
+  color: #457B9D;
+}
+
+.day{
   border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 100ms linear;
+}
+
+.week{
+  display: flex;
+  justify-content: center;
+}
+
+.week-day{
+  color: #70757a;
+}
+
+.day,
+.week-day{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  width: 4ch;
+  height: 4ch;
+  font-size: 13px;
+}
+
+.day:hover,
+.month:hover,
+.year:hover,
+.btn-direction:hover,
+#btn-year:hover,
+#btn-month:hover{
+  background-color: #f1f3f4;
+  color: black !important;
+}
+
+.opacity{
+  color: darkgray;
+}
+
+.current{
+  background-color: #1967d2;
   color: white !important;
+}
+
+table{
+  width: 100%;
+}
+
+table td{
+  text-align: center;
+}
+
+.month,
+.year{
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
 }

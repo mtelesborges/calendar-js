@@ -1,4 +1,5 @@
 export const ptBr = {
+  locale: "pt-Br",
   days: [
     {
       "short": "D",

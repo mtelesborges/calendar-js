@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Calendar</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<section id="calendarJS" style="display:none">
   <div style="display: flex; align-items: center;">
     <div id="calendar">
       <div class="title">
@@ -14,93 +9,142 @@
           <img src="./svg/previous.svg" alt="<">
         </button>
         <div>
-          <select name="months" id="months">
-            <option value="0"  id="m1"></option>
-            <option value="1"  id="m2"></option>
-            <option value="2"  id="m3"></option>
-            <option value="3"  id="m4"></option>
-            <option value="4"  id="m5"></option>
-            <option value="5"  id="m6"></option>
-            <option value="6"  id="m7"></option>
-            <option value="7"  id="m8"></option>
-            <option value="8"  id="m9"></option>
-            <option value="9" id="m10"></option>
-            <option value="10" id="m11"></option>
-            <option value="11" id="m12"></option>
-          </select>
-          <input type="number" name="year" id="year">
+          <button id="btn-month">
+            <div class="cm" id="month"></div>
+          </button>
+          <button id="btn-year">
+            <div class="cm" id="year"></div>
+          </button>
         </div>
         <button class="btn-direction" id="next">
           <img src="./svg/next.svg" alt=">">
         </button>
       </div>
       <hr>
-      <div class="s">
-        <div class="wd" id="wd1"></div>
-        <div class="wd" id="wd2"></div>
-        <div class="wd" id="wd3"></div>
-        <div class="wd" id="wd4"></div>
-        <div class="wd" id="wd5"></div>
-        <div class="wd" id="wd6"></div>
-        <div class="wd" id="wd7"></div>
-      </div>
-      <hr style="margin-bottom: 1ch;">
-      <div class="s s1">
-        <div class="d" id="d1"></div>
-        <div class="d" id="d2"></div>
-        <div class="d" id="d3"></div>
-        <div class="d" id="d4"></div>
-        <div class="d" id="d5"></div>
-        <div class="d" id="d6"></div>
-        <div class="d" id="d7"></div>
-      </div>
-      <div class="s s2">
-        <div class="d" id="d8"></div>
-        <div class="d" id="d9"></div>
-        <div class="d" id="d10"></div>
-        <div class="d" id="d11"></div>
-        <div class="d" id="d12"></div>
-        <div class="d" id="d13"></div>
-        <div class="d" id="d14"></div>
-      </div>
-      <div class="s s3">
-        <div class="d" id="d15"></div>
-        <div class="d" id="d16"></div>
-        <div class="d" id="d17"></div>
-        <div class="d" id="d18"></div>
-        <div class="d" id="d19"></div>
-        <div class="d" id="d20"></div>
-        <div class="d" id="d21"></div>
-      </div>
-      <div class="s s4">
-        <div class="d" id="d22"></div>
-        <div class="d" id="d23"></div>
-        <div class="d" id="d24"></div>
-        <div class="d" id="d25"></div>
-        <div class="d" id="d26"></div>
-        <div class="d" id="d27"></div>
-        <div class="d" id="d28"></div>
-      </div>
-      <div class="s s5">
-        <div class="d" id="d29"></div>
-        <div class="d" id="d30"></div>
-        <div class="d" id="d31"></div>
-        <div class="d" id="d32"></div>
-        <div class="d" id="d33"></div>
-        <div class="d" id="d34"></div>
-        <div class="d" id="d35"></div>
-      </div>
-      <div class="s s6">
-        <div class="d" id="d36"></div>
-        <div class="d" id="d37"></div>
-        <div class="d" id="d38"></div>
-        <div class="d" id="d39"></div>
-        <div class="d" id="d40"></div>
-        <div class="d" id="d41"></div>
-        <div class="d" id="d42"></div>
+      <div style="display:flex; align-items: center; flex-direction: column;">
+        <div id="calendar-days">
+          <table>
+            <thead>
+              <tr class="s">
+                <th scope="col" class="wd" id="wd1"></th>
+                <th scope="col" class="wd" id="wd2"></th>
+                <th scope="col" class="wd" id="wd3"></th>
+                <th scope="col" class="wd" id="wd4"></th>
+                <th scope="col" class="wd" id="wd5"></th>
+                <th scope="col" class="wd" id="wd6"></th>
+                <th scope="col" class="wd" id="wd7"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="s s1">
+                <td class="d" id="d1" datepicker-day></td>
+                <td class="d" id="d2" datepicker-day></td>
+                <td class="d" id="d3" datepicker-day></td>
+                <td class="d" id="d4" datepicker-day></td>
+                <td class="d" id="d5" datepicker-day></td>
+                <td class="d" id="d6" datepicker-day></td>
+                <td class="d" id="d7" datepicker-day></td>
+              </tr>
+              <tr class="s s2">
+                <td class="d" id="d8"  datepicker-day></td>
+                <td class="d" id="d9"  datepicker-day></td>
+                <td class="d" id="d10" datepicker-day></td>
+                <td class="d" id="d11" datepicker-day></td>
+                <td class="d" id="d12" datepicker-day></td>
+                <td class="d" id="d13" datepicker-day></td>
+                <td class="d" id="d14" datepicker-day></td>
+              </tr>
+              <tr class="s s3">
+                <td class="d" id="d15" datepicker-day></td>
+                <td class="d" id="d16" datepicker-day></td>
+                <td class="d" id="d17" datepicker-day></td>
+                <td class="d" id="d18" datepicker-day></td>
+                <td class="d" id="d19" datepicker-day></td>
+                <td class="d" id="d20" datepicker-day></td>
+                <td class="d" id="d21" datepicker-day></td>
+              </tr>
+              <tr class="s s4">
+                <td class="d" id="d22" datepicker-day></td>
+                <td class="d" id="d23" datepicker-day></td>
+                <td class="d" id="d24" datepicker-day></td>
+                <td class="d" id="d25" datepicker-day></td>
+                <td class="d" id="d26" datepicker-day></td>
+                <td class="d" id="d27" datepicker-day></td>
+                <td class="d" id="d28" datepicker-day></td>
+              </tr>
+              <tr class="s s5">
+                <td class="d" id="d29" datepicker-day></td>
+                <td class="d" id="d30" datepicker-day></td>
+                <td class="d" id="d31" datepicker-day></td>
+                <td class="d" id="d32" datepicker-day></td>
+                <td class="d" id="d33" datepicker-day></td>
+                <td class="d" id="d34" datepicker-day></td>
+                <td class="d" id="d35" datepicker-day></td>
+              </tr>
+              <tr class="s s6">
+                <td class="d" id="d36" datepicker-day></td>
+                <td class="d" id="d37" datepicker-day></td>
+                <td class="d" id="d38" datepicker-day></td>
+                <td class="d" id="d39" datepicker-day></td>
+                <td class="d" id="d40" datepicker-day></td>
+                <td class="d" id="d41" datepicker-day></td>
+                <td class="d" id="d42" datepicker-day></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="calendar-months">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="cm" id="cm1" datepicker-month></span></td>
+                <td><span class="cm" id="cm2" datepicker-month></span></td>
+                <td><span class="cm" id="cm3" datepicker-month></span></td>
+              </tr>
+              <tr>
+                <td><span class="cm" id="cm4" datepicker-month></span></td>
+                <td><span class="cm" id="cm5" datepicker-month></span></td>
+                <td><span class="cm" id="cm6" datepicker-month></span></td>
+              </tr>
+              <tr>
+                <td><span class="cm" id="cm7" datepicker-month></span></td>
+                <td><span class="cm" id="cm8" datepicker-month></span></td>
+                <td><span class="cm" id="cm9" datepicker-month></span></td>
+              </tr>
+              <tr>
+                <td><span class="cm" id="cm10" datepicker-month></span></td>
+                <td><span class="cm" id="cm11" datepicker-month></span></td>
+                <td><span class="cm" id="cm12" datepicker-month></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="calendar-years">
+          <table>
+            <tbody>
+              <tr>
+                <td><span class="cm" id="y1" datepicker-year></span></td>
+                <td><span class="cm" id="y2" datepicker-year></span></td>
+                <td><span class="cm" id="y3" datepicker-year></span></td>
+              </tr>
+              <tr>
+                <td><span class="cm" id="y4" datepicker-year></span></td>
+                <td><span class="cm" id="y5" datepicker-year></span></td>
+                <td><span class="cm" id="y6" datepicker-year></span></td>
+              </tr>
+              <tr>
+                <td><span class="cm" id="y7" datepicker-year></span></td>
+                <td><span class="cm" id="y8" datepicker-year></span></td>
+                <td><span class="cm" id="y9" datepicker-year></span></td>
+              </tr>
+              <tr>
+                <td><span class="cm" id="y10" datepicker-year></span></td>
+                <td><span class="cm" id="y11" datepicker-year></span></td>
+                <td><span class="cm" id="y12" datepicker-year></span></td>
+              </tr>
+        </div>
       </div>
     </div>
   </div>
   <script src="./js/index.js" type="module"></script>
-</body>
-</html>
+</section>
